@@ -21,26 +21,10 @@ export const init = async () => {
     },
     {
       type: 'text',
-      name: 'brandName',
-      message:
-        'What is the brand name of the component library you rely on? Like "Ant Design"',
-      initial: 'Ant Design',
-      validate: required,
-    },
-    {
-      type: 'text',
       name: 'packageName',
       message:
-        'What is the package name of the component library you rely on? Like "antd"',
-      initial: 'Ant Design',
-      validate: required,
-    },
-    {
-      type: 'text',
-      name: 'repoName',
-      message:
-        'What is the repo name of the component library you depend on? Like "antd"',
-      initial: 'antd',
+        'What is the package name of the component library you rely on? Like "ts-tools"',
+      initial: 'ts-tools',
       validate: required,
     },
     {
@@ -51,7 +35,7 @@ export const init = async () => {
     },
   ])
   if (params.repoName) {
-    await generate({ ...params, pascalName: pascalCase(params.repoName) })
+    await generate({ ...params})
     execa('yarn', ['install', '--ignore-engines'], { cwd }).stdout.pipe(
       process.stdout
     )
