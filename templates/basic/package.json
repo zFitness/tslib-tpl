@@ -1,7 +1,7 @@
 {
   "name": "<%= repoName %>",
-  "version": "1.0.6",
-  "description": "A template repository to make Typescript lib packages with Rollup.js and Jest for testing.",
+  "version": "1.0.0",
+  "description": "<%= description %>",
   "files": [
     "dist",
     "lib",
@@ -29,10 +29,10 @@
     "template",
     "esbuild"
   ],
-  "author": "zfitness",
+  "author": "<%= author %>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zFitness/ts-rollup-lib-template"
+    "url": "https://github.com/zFitness/tslib-tpl"
   },
   "license": "ISC",
   "devDependencies": {

@@ -3,14 +3,7 @@ import fs from 'fs-extra'
 import ejs from 'ejs'
 import { glob } from 'glob'
 import { cwd } from '../constants'
-
-export interface IGeneratorParams {
-  template: string
-  repoName: string
-  userName: string
-  brandName: string
-  pascalName: string
-}
+import { IGeneratorParams } from 'types'
 
 export const generate = async (params: IGeneratorParams) => {
   try {

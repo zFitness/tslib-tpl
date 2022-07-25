@@ -1,9 +1,8 @@
 import path from 'path'
 import prompts from 'prompts'
 import { pascalCase } from 'pascal-case'
-import { cwd, templates } from '../constants'
+import { templates } from '../constants'
 import { generate } from './generate'
-import execa from 'execa'
 
 const required = (value: string) => (!value ? 'this field is required' : true)
 
@@ -28,20 +27,22 @@ export const init = async () => {
     },
     {
       type: 'text',
+      name: 'description',
+      message: 'A description about the library?',
+    },
+    {
+      type: 'text',
       name: 'packageName',
-      message: 'What is the package name of the library? Like "ts-tools"',
+      message: 'What is the npm package name of the library? Like "ts-tools"',
       initial: 'ts-tools',
       validate: required,
     },
     {
       type: 'text',
-      name: 'userName',
+      name: 'author',
       message: 'What is your GitHub username?',
       validate: required,
     },
   ])
   await generate({ ...params })
-  execa('yarn', ['install', '--ignore-engines'], { cwd }).stdout.pipe(
-    process.stdout
-  )
 }

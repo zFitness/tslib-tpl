@@ -26,3 +26,4 @@ doc-site
 .lerna-changelog
 .history
 .lint-report.log
+/ts-tools
