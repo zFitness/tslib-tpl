@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-npm install -g ts-node tslib-tpl
+npm install -g @zfitness/tslib-tpl
 ```
 
 ## 初始化
