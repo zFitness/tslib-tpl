@@ -1,17 +1,23 @@
 # tslib-tpl
 
-> 一个开发 typescript 库的脚手架
+> A command line tool for developing typescript libraries.
 
-## 安装
+<div align="center">
+
+English | [简体中文](./README-zh_CN.md)
+
+</div>
+
+## install
 
 ```bash
 npm install -g @zfitness/tslib-tpl
 ```
 
-## 初始化
-
-先 cd 到你需要初始化的项目目录，执行以下命令
+## init
 
 ```bash
 tslib-tpl init
 ```
+
+![](./media/tty.gif)
