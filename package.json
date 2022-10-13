@@ -56,7 +56,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run build && lint-staged",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint --edit"
     }
   },
